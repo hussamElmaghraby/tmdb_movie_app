@@ -1,0 +1,7 @@
+class AssetNames {
+  //Images
+
+
+  //Icons
+
+}
