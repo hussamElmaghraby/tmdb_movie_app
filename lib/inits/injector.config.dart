@@ -16,6 +16,22 @@ import 'package:tmdb_movie_app/common/modules/dio_module.dart' as _i1071;
 import 'package:tmdb_movie_app/common/singletons/dio_singleton.dart' as _i208;
 import 'package:tmdb_movie_app/common/storage/shared_data_service.dart'
     as _i121;
+import 'package:tmdb_movie_app/features/movies/data/datasource/movies_datasource.dart'
+    as _i1006;
+import 'package:tmdb_movie_app/features/movies/data/repo_impl/movies_repo_impl.dart'
+    as _i339;
+import 'package:tmdb_movie_app/features/movies/domain/repository/movies_repository.dart'
+    as _i559;
+import 'package:tmdb_movie_app/features/movies/domain/usecases/get_movie_details_usecase.dart'
+    as _i159;
+import 'package:tmdb_movie_app/features/movies/domain/usecases/get_now_playing_movies_usecase.dart'
+    as _i753;
+import 'package:tmdb_movie_app/features/movies/domain/usecases/get_popular_movies_usecase.dart'
+    as _i100;
+import 'package:tmdb_movie_app/features/movies/domain/usecases/get_top_rated_movies_usecase.dart'
+    as _i417;
+import 'package:tmdb_movie_app/features/movies/domain/usecases/search_movies_usecase.dart'
+    as _i566;
 
 extension GetItInjectableX on _i174.GetIt {
 // initializes the registration of main-scope dependencies inside of GetIt
@@ -38,6 +54,23 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.lazySingleton<_i361.Dio>(
         () => registerModule.dio(gh<String>(instanceName: 'BaseUrl')));
+    gh.factory<_i1006.MoviesDatasource>(
+        () => _i1006.MoviesDatasource(gh<_i361.Dio>()));
+    gh.factory<_i559.MovieRepository>(() =>
+        _i339.MovieRepoImpl(moviesDatasource: gh<_i1006.MoviesDatasource>()));
+    gh.factory<_i417.GetTopRatedMoviesUsecase>(() =>
+        _i417.GetTopRatedMoviesUsecase(
+            movieRepository: gh<_i559.MovieRepository>()));
+    gh.factory<_i100.GetPopularMoviesUsecase>(() =>
+        _i100.GetPopularMoviesUsecase(
+            movieRepository: gh<_i559.MovieRepository>()));
+    gh.factory<_i753.GetNowPlayingMoviesUsecase>(() =>
+        _i753.GetNowPlayingMoviesUsecase(
+            movieRepository: gh<_i559.MovieRepository>()));
+    gh.factory<_i566.GetSearchMoviesUsecase>(() => _i566.GetSearchMoviesUsecase(
+        movieRepository: gh<_i559.MovieRepository>()));
+    gh.factory<_i159.GetMovieDetailsUsecase>(() => _i159.GetMovieDetailsUsecase(
+        movieRepository: gh<_i559.MovieRepository>()));
     return this;
   }
 }
