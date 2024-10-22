@@ -15,3 +15,6 @@ dart pub run build_runner watch -d
 ## Apply Rules
 - dart fix --apply      
 
+
+
+# Dear technical team, please accept the order if there is any delay or lack of requirements, as I tried to implement what I could in the limited time for me.
