@@ -78,12 +78,8 @@ mixin _$MovieDetailsResponseModel {
   @JsonKey(name: "vote_count")
   int? get voteCount => throw _privateConstructorUsedError;
 
-  /// Serializes this MovieDetailsResponseModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of MovieDetailsResponseModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $MovieDetailsResponseModelCopyWith<MovieDetailsResponseModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -139,8 +135,6 @@ class _$MovieDetailsResponseModelCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of MovieDetailsResponseModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -279,8 +273,6 @@ class _$MovieDetailsResponseModelCopyWithImpl<$Res,
     ) as $Val);
   }
 
-  /// Create a copy of MovieDetailsResponseModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $BelongsToCollectionCopyWith<$Res>? get belongsToCollection {
@@ -349,8 +341,6 @@ class __$$MovieDetailsResponseModelImplCopyWithImpl<$Res>
       $Res Function(_$MovieDetailsResponseModelImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MovieDetailsResponseModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -707,7 +697,7 @@ class _$MovieDetailsResponseModelImpl extends _MovieDetailsResponseModel {
                 other.voteCount == voteCount));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -739,9 +729,7 @@ class _$MovieDetailsResponseModelImpl extends _MovieDetailsResponseModel {
         voteCount
       ]);
 
-  /// Create a copy of MovieDetailsResponseModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$MovieDetailsResponseModelImplCopyWith<_$MovieDetailsResponseModelImpl>
@@ -872,11 +860,8 @@ abstract class _MovieDetailsResponseModel extends MovieDetailsResponseModel {
   @override
   @JsonKey(name: "vote_count")
   int? get voteCount;
-
-  /// Create a copy of MovieDetailsResponseModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$MovieDetailsResponseModelImplCopyWith<_$MovieDetailsResponseModelImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -896,12 +881,8 @@ mixin _$BelongsToCollection {
   @JsonKey(name: "backdrop_path")
   dynamic get backdropPath => throw _privateConstructorUsedError;
 
-  /// Serializes this BelongsToCollection to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of BelongsToCollection
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $BelongsToCollectionCopyWith<BelongsToCollection> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -929,8 +910,6 @@ class _$BelongsToCollectionCopyWithImpl<$Res, $Val extends BelongsToCollection>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of BelongsToCollection
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -983,8 +962,6 @@ class __$$BelongsToCollectionImplCopyWithImpl<$Res>
       $Res Function(_$BelongsToCollectionImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of BelongsToCollection
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1058,7 +1035,7 @@ class _$BelongsToCollectionImpl extends _BelongsToCollection {
                 .equals(other.backdropPath, backdropPath));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1067,9 +1044,7 @@ class _$BelongsToCollectionImpl extends _BelongsToCollection {
       const DeepCollectionEquality().hash(posterPath),
       const DeepCollectionEquality().hash(backdropPath));
 
-  /// Create a copy of BelongsToCollection
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$BelongsToCollectionImplCopyWith<_$BelongsToCollectionImpl> get copyWith =>
@@ -1108,11 +1083,8 @@ abstract class _BelongsToCollection extends BelongsToCollection {
   @override
   @JsonKey(name: "backdrop_path")
   dynamic get backdropPath;
-
-  /// Create a copy of BelongsToCollection
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$BelongsToCollectionImplCopyWith<_$BelongsToCollectionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1128,12 +1100,8 @@ mixin _$Genre {
   @JsonKey(name: "name")
   String? get name => throw _privateConstructorUsedError;
 
-  /// Serializes this Genre to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of Genre
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $GenreCopyWith<Genre> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -1156,8 +1124,6 @@ class _$GenreCopyWithImpl<$Res, $Val extends Genre>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of Genre
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1196,8 +1162,6 @@ class __$$GenreImplCopyWithImpl<$Res>
       _$GenreImpl _value, $Res Function(_$GenreImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of Genre
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1248,13 +1212,11 @@ class _$GenreImpl extends _Genre {
             (identical(other.name, name) || other.name == name));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, name);
 
-  /// Create a copy of Genre
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GenreImplCopyWith<_$GenreImpl> get copyWith =>
@@ -1282,11 +1244,8 @@ abstract class _Genre extends Genre {
   @override
   @JsonKey(name: "name")
   String? get name;
-
-  /// Create a copy of Genre
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GenreImplCopyWith<_$GenreImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1306,12 +1265,8 @@ mixin _$ProductionCompany {
   @JsonKey(name: "origin_country")
   String? get originCountry => throw _privateConstructorUsedError;
 
-  /// Serializes this ProductionCompany to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of ProductionCompany
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ProductionCompanyCopyWith<ProductionCompany> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1339,8 +1294,6 @@ class _$ProductionCompanyCopyWithImpl<$Res, $Val extends ProductionCompany>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ProductionCompany
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1393,8 +1346,6 @@ class __$$ProductionCompanyImplCopyWithImpl<$Res>
       $Res Function(_$ProductionCompanyImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ProductionCompany
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1468,14 +1419,12 @@ class _$ProductionCompanyImpl extends _ProductionCompany {
                 other.originCountry == originCountry));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, logoPath, name, originCountry);
 
-  /// Create a copy of ProductionCompany
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ProductionCompanyImplCopyWith<_$ProductionCompanyImpl> get copyWith =>
@@ -1514,11 +1463,8 @@ abstract class _ProductionCompany extends ProductionCompany {
   @override
   @JsonKey(name: "origin_country")
   String? get originCountry;
-
-  /// Create a copy of ProductionCompany
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ProductionCompanyImplCopyWith<_$ProductionCompanyImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1534,12 +1480,8 @@ mixin _$ProductionCountry {
   @JsonKey(name: "name")
   String? get name => throw _privateConstructorUsedError;
 
-  /// Serializes this ProductionCountry to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of ProductionCountry
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ProductionCountryCopyWith<ProductionCountry> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1565,8 +1507,6 @@ class _$ProductionCountryCopyWithImpl<$Res, $Val extends ProductionCountry>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ProductionCountry
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1607,8 +1547,6 @@ class __$$ProductionCountryImplCopyWithImpl<$Res>
       $Res Function(_$ProductionCountryImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ProductionCountry
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1661,13 +1599,11 @@ class _$ProductionCountryImpl extends _ProductionCountry {
             (identical(other.name, name) || other.name == name));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, iso31661, name);
 
-  /// Create a copy of ProductionCountry
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ProductionCountryImplCopyWith<_$ProductionCountryImpl> get copyWith =>
@@ -1697,11 +1633,8 @@ abstract class _ProductionCountry extends ProductionCountry {
   @override
   @JsonKey(name: "name")
   String? get name;
-
-  /// Create a copy of ProductionCountry
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ProductionCountryImplCopyWith<_$ProductionCountryImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1719,12 +1652,8 @@ mixin _$SpokenLanguage {
   @JsonKey(name: "name")
   String? get name => throw _privateConstructorUsedError;
 
-  /// Serializes this SpokenLanguage to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of SpokenLanguage
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $SpokenLanguageCopyWith<SpokenLanguage> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1751,8 +1680,6 @@ class _$SpokenLanguageCopyWithImpl<$Res, $Val extends SpokenLanguage>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of SpokenLanguage
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1799,8 +1726,6 @@ class __$$SpokenLanguageImplCopyWithImpl<$Res>
       _$SpokenLanguageImpl _value, $Res Function(_$SpokenLanguageImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of SpokenLanguage
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1863,13 +1788,11 @@ class _$SpokenLanguageImpl extends _SpokenLanguage {
             (identical(other.name, name) || other.name == name));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, englishName, iso6391, name);
 
-  /// Create a copy of SpokenLanguage
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SpokenLanguageImplCopyWith<_$SpokenLanguageImpl> get copyWith =>
@@ -1903,11 +1826,8 @@ abstract class _SpokenLanguage extends SpokenLanguage {
   @override
   @JsonKey(name: "name")
   String? get name;
-
-  /// Create a copy of SpokenLanguage
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SpokenLanguageImplCopyWith<_$SpokenLanguageImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

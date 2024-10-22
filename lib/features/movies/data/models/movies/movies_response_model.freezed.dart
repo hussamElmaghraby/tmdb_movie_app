@@ -29,12 +29,8 @@ mixin _$MoviesResponseModel {
   @JsonKey(name: "total_results")
   int? get totalResults => throw _privateConstructorUsedError;
 
-  /// Serializes this MoviesResponseModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of MoviesResponseModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $MoviesResponseModelCopyWith<MoviesResponseModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -62,8 +58,6 @@ class _$MoviesResponseModelCopyWithImpl<$Res, $Val extends MoviesResponseModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of MoviesResponseModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -116,8 +110,6 @@ class __$$MovieResponseModelImplCopyWithImpl<$Res>
       $Res Function(_$MovieResponseModelImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MoviesResponseModel
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -200,14 +192,12 @@ class _$MovieResponseModelImpl extends _MovieResponseModel {
                 other.totalResults == totalResults));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, page,
       const DeepCollectionEquality().hash(_results), totalPages, totalResults);
 
-  /// Create a copy of MoviesResponseModel
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$MovieResponseModelImplCopyWith<_$MovieResponseModelImpl> get copyWith =>
@@ -246,11 +236,8 @@ abstract class _MovieResponseModel extends MoviesResponseModel {
   @override
   @JsonKey(name: "total_results")
   int? get totalResults;
-
-  /// Create a copy of MoviesResponseModel
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$MovieResponseModelImplCopyWith<_$MovieResponseModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -290,12 +277,8 @@ mixin _$Result {
   @JsonKey(name: "vote_count")
   int? get voteCount => throw _privateConstructorUsedError;
 
-  /// Serializes this Result to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of Result
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ResultCopyWith<Result> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -331,8 +314,6 @@ class _$ResultCopyWithImpl<$Res, $Val extends Result>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of Result
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -444,8 +425,6 @@ class __$$ResultImplCopyWithImpl<$Res>
       _$ResultImpl _value, $Res Function(_$ResultImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of Result
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -635,7 +614,7 @@ class _$ResultImpl extends _Result {
                 other.voteCount == voteCount));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -654,9 +633,7 @@ class _$ResultImpl extends _Result {
       voteAverage,
       voteCount);
 
-  /// Create a copy of Result
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ResultImplCopyWith<_$ResultImpl> get copyWith =>
@@ -732,11 +709,8 @@ abstract class _Result extends Result {
   @override
   @JsonKey(name: "vote_count")
   int? get voteCount;
-
-  /// Create a copy of Result
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ResultImplCopyWith<_$ResultImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

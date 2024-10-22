@@ -23,7 +23,7 @@ class DioInterceptor extends Interceptor {
     options.headers.addAll({
       "Content-Type": "application/json",
       "Accept": "*/*",
-      "Authorization": accessToken
+      "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNmM0YmRiMDgyZGNkOGM3NTEwNmFjNzJjNDc2ZDQ4ZSIsIm5iZiI6MTcyOTM0ODExMi44MTI2NDYsInN1YiI6IjY1NjlhMWEyNjM1MzZhMDBjNDJhOGNkYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.YKyznpS-ARloCyiyxnWXxZt0iJUh3Tlu6qIvX2fr4Xs"
     });
 
     return super.onRequest(options, handler);
@@ -37,8 +37,6 @@ class DioInterceptor extends Interceptor {
   @override
   void onError(DioException err, ErrorInterceptorHandler handler) async {
     handler.next(err);
-
-
   }
 
   Future<Response<dynamic>> refreshToken() async {

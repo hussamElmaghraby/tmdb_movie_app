@@ -10,6 +10,6 @@ class GetMovieDetailsUsecase {
   GetMovieDetailsUsecase({required MovieRepository movieRepository})
       : _movieRepository = movieRepository;
 
-  Future<MovieDetailsResponseEntity> call({required String movieId}) async =>
+  Future<MovieDetailsResponseEntity> call({required int? movieId}) async =>
       _movieRepository.getMovie(movieId: movieId);
 }

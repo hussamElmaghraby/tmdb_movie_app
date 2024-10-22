@@ -10,67 +10,62 @@ ThemeData lightTheme = ThemeData(
   hoverColor: Colors.black,
 
   fontFamily: appFontFamily,
-  appBarTheme:  AppBarTheme(
+  appBarTheme: AppBarTheme(
     backgroundColor: Color(0xffffffff),
     titleTextStyle: TextStyle(
-      color: AppColors.primaryColor,
+      color: Colors.black,
       fontSize: Sizer.size20,
-      fontWeight: FontWeight.bold,
     ),
   ),
   textTheme: TextTheme(
     titleLarge: const TextStyle(
-      fontWeight: FontWeight.bold,
       color: Colors.black,
-      fontSize: Sizer.size28,
+      fontSize: Sizer.size30,
     ),
     titleMedium: TextStyle(
-      fontWeight: FontWeight.bold,
-      color: AppColors.titleColor,
-      fontSize: Sizer.size14,
+      color: Colors.black,
+      fontSize: Sizer.size20,
     ),
-    titleSmall:  TextStyle(
-      color: AppColors.primaryColor,
-      fontSize: Sizer.size13,
+    titleSmall: TextStyle(
+      color: Colors.black,
+      fontSize: Sizer.size15,
     ),
     headlineLarge: TextStyle(
-      color: Colors.black,
+      color: Colors.white,
       fontSize: Sizer.size24,
     ),
     headlineMedium: const TextStyle(
-      color: Colors.black,
+      color: Colors.white,
       fontSize: Sizer.size16,
     ),
     headlineSmall: TextStyle(
-      color: AppColors.appBlackColor,
+      color: Colors.white,
       fontSize: Sizer.size14,
     ),
     displayLarge: const TextStyle(
-      fontWeight: FontWeight.bold,
-      color: Color(0xff27003F),
+      color: Colors.grey,
       fontSize: Sizer.size28,
     ),
     displayMedium: const TextStyle(
-      color: Color(0xcc404B5A),
-      height: 1.3,
+      color: Colors.grey,
       fontSize: Sizer.size16,
     ),
-    displaySmall:  TextStyle(
-      color: AppColors.secondaryColor,
+    displaySmall: TextStyle(
+      color: Colors.grey,
       fontSize: Sizer.size12,
     ),
   ),
   // disabledColor: const Color(0xff949088),
-  colorScheme:  ColorScheme(
+  colorScheme: ColorScheme(
     brightness: Brightness.light,
-    secondary: AppColors.primaryColor,
-    primary: AppColors.primaryColor,
-    onPrimary: AppColors.appDisplayColor,
+    secondary: Colors.white,
+    primary: Colors.black,
+    onPrimary: Colors.black,
     onSecondary: Colors.black,
-    error: Colors.white,
-    onError: Colors.white,
+    error: Colors.red,
+    onError: Colors.red,
     surface: Colors.white,
-    onSurface: AppColors.onSurfaceColor,
+    onSurface: Colors.white,
   ),
 );
 
@@ -78,64 +73,62 @@ ThemeData darkTheme = ThemeData(
   appBarTheme: const AppBarTheme(
     backgroundColor: Color(0xff000000),
     titleTextStyle: TextStyle(
-      color: Color(0xffD4B373),
+      color: Colors.white,
       fontSize: Sizer.size20,
-      fontWeight: FontWeight.bold,
     ),
   ),
   textTheme: const TextTheme(
     titleLarge: TextStyle(
-      fontWeight: FontWeight.bold,
-      color: Color(0xffD4B373),
+      color: Colors.white,
       fontSize: Sizer.size30,
     ),
     titleMedium: TextStyle(
-      fontWeight: FontWeight.bold,
-      color: Color(0xffD4B373),
-      fontSize: Sizer.size25,
+      color: Colors.white,
+      fontSize: Sizer.size20,
     ),
     titleSmall: TextStyle(
-      color: Color(0xffD4B373),
-      fontSize: Sizer.size20,
-      fontWeight: FontWeight.bold,
-    ),
-    headlineLarge: TextStyle(
-      color: Color(0xffD4B373),
-      fontSize: Sizer.size20,
-    ),
-    headlineMedium: TextStyle(
-      color: Color(0xffD4B373),
+      color: Colors.white,
       fontSize: Sizer.size15,
     ),
+    headlineLarge: TextStyle(
+      color: Colors.black,
+      fontSize: Sizer.size24,
+    ),
+    headlineMedium: TextStyle(
+      color: Colors.black,
+      fontSize: Sizer.size16,
+    ),
     headlineSmall: TextStyle(
-      color: Color(0xffD4B373),
+      color: Colors.black,
+      fontSize: Sizer.size14,
+    ),
+    displaySmall: TextStyle(
+      color: Colors.grey,
+      fontSize: Sizer.size28,
+    ),
+    displayMedium: TextStyle(
+      color: Colors.grey,
+      fontSize: Sizer.size16,
+    ),
+    displayLarge: TextStyle(
+      color: Colors.grey,
       fontSize: Sizer.size12,
     ),
   ),
   disabledColor: const Color(0xff949088),
   colorScheme: const ColorScheme(
     brightness: Brightness.dark,
-    secondary: Color(0xffffffff),
-    primary: Color(0xff906A12),
-    onPrimary: Color(0xffddd6c8),
-    onSecondary: Color(0xffD4B373),
-    error: Colors.white,
-    onError: Colors.white,
+    secondary:  Colors.black,
+    primary: Colors.black,
+    onPrimary: Colors.black,
+    onSecondary: Colors.white,
+    error: Colors.red,
+    onError: Colors.red,
     surface: Colors.white,
-    onSurface: Colors.white, background: AppColors.onSurfaceColor, onBackground: AppColors.onSurfaceColor,
+    onSurface: Colors.white,
   ),
 );
 
-class CommonTextStyles  {
-  static TextStyle brown13TextSTyle = TextStyle(
-    color: AppColors.appBrownColor,
-    fontSize: Sizer.size13,
-  );
-}
 
-extension TextThemeExtension on TextTheme {
-   TextStyle get brown13TextSTyle => TextStyle(
-    color: AppColors.appBrownColor,
-    fontSize: Sizer.size13,
-  );
-}
+
+

@@ -67,7 +67,7 @@ class MovieDetailsResponseModel with _$MovieDetailsResponseModel {
         originalTitle: originalTitle,
         overview: overview,
         popularity: popularity,
-        posterPath: posterPath,
+    posterPath: "https://image.tmdb.org/t/p/w500$posterPath",
         productionCompanies:
             productionCompanies?.map((e) => e.toEntity()).toList(),
         productionCountries:
@@ -101,7 +101,7 @@ class BelongsToCollection with _$BelongsToCollection {
   BelongsToCollectionEntity toEntity() => BelongsToCollectionEntity(
         id: id,
         name: name,
-        posterPath: posterPath,
+        posterPath: "https://image.tmdb.org/t/p/w500$posterPath",
         backdropPath: backdropPath,
       );
 

@@ -156,9 +156,10 @@ class _MoviesDatasource implements MoviesDatasource {
   }
 
   @override
-  Future<MovieDetailsResponseModel> getMovie(String movieId) async {
+  Future<MovieDetailsResponseModel> getMovie(int? movieId) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
+    queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
     final _options = _setStreamType<MovieDetailsResponseModel>(Options(
@@ -168,7 +169,7 @@ class _MoviesDatasource implements MoviesDatasource {
     )
         .compose(
           _dio.options,
-          '/movie/${movieId}',
+          '/3/movie/${movieId}',
           queryParameters: queryParameters,
           data: _data,
         )

@@ -66,7 +66,7 @@ class Result with _$Result {
         originalTitle: originalTitle,
         overview: overview,
         popularity: popularity,
-        posterPath: posterPath,
+        posterPath: "https://image.tmdb.org/t/p/w500$posterPath" ,
         releaseDate: releaseDate,
         title: title,
         video: video,

@@ -10,6 +10,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:loader_overlay/loader_overlay.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
+import 'package:tmdb_movie_app/features/movies/presentation/screens/home_screen.dart';
+import 'package:tmdb_movie_app/features/movies/presentation/screens/movies_screen.dart';
+import 'package:tmdb_movie_app/features/movies/presentation/state_managment/movies_bloc.dart';
 
 import '../common/routes/names.dart';
 import '../common/routes/pages.dart';
@@ -24,28 +27,39 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GlobalLoaderOverlay(
-      disableBackButton: false,
-      overlayWidgetBuilder: (_) => LoadingAnimationWidget.staggeredDotsWave(
-        color: Colors.white,
-        size: 200,
-      ),
-      child: ScreenUtilInit(
-        child:
-            GetMaterialApp(
-          // color: Get.theme.colorScheme.background,
-          translations: TranslationService(),
-          darkTheme: darkTheme,
-          theme: lightTheme,
-          themeMode: ThemeManager().getTheme,
-          debugShowCheckedModeBanner: false,
-          getPages: AppPages.routes,
-          locale: TranslationService.arabicLocale,
-          fallbackLocale: TranslationService.fallbackLocale,
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (_) => MoviesBloc(),
+          child: MoviesScreen(),
         ),
-        // ),
+        BlocProvider(
+          create: (_) => MoviesBloc(),
+          child: HomeScreen(),
+        ),
+      ],
+      child: GlobalLoaderOverlay(
+        disableBackButton: false,
+        overlayWidgetBuilder: (_) => LoadingAnimationWidget.staggeredDotsWave(
+          color: Colors.white,
+          size: 200,
+        ),
+        child: ScreenUtilInit(
+          child: GetMaterialApp(
+            // color: Get.theme.colorScheme.background,
+            translations: TranslationService(),
+            darkTheme: darkTheme,
+            initialRoute: AppRoutes.HOME,
+            theme: lightTheme,
+            themeMode: ThemeManager().getTheme,
+            debugShowCheckedModeBanner: false,
+            getPages: AppPages.routes,
+            locale: TranslationService.englishLocale,
+            fallbackLocale: TranslationService.fallbackLocale,
+          ),
+          // ),
+        ),
       ),
     );
   }
-
 }

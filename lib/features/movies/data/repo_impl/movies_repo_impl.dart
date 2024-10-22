@@ -14,7 +14,7 @@ final MoviesDatasource _moviesDatasource;
   MovieRepoImpl({required MoviesDatasource moviesDatasource}) : _moviesDatasource = moviesDatasource;
 
   @override
-  Future<MovieDetailsResponseEntity> getMovie({required String movieId})async {
+  Future<MovieDetailsResponseEntity> getMovie({required int? movieId})async {
     final MovieDetailsResponseModel response  = await _moviesDatasource.getMovie(movieId);
     return response.toEntity();
   }

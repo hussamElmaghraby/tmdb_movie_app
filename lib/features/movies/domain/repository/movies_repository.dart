@@ -10,5 +10,5 @@ abstract class MovieRepository {
 
   Future<MoviesResponseEntity> searchMovie();
 
-  Future<MovieDetailsResponseEntity> getMovie({required String movieId});
+  Future<MovieDetailsResponseEntity> getMovie({required int? movieId});
 }

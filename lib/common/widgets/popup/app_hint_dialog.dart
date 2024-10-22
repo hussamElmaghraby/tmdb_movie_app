@@ -1,15 +1,16 @@
 import 'package:tmdb_movie_app/common/constants/spacers.dart';
 import 'package:tmdb_movie_app/common/extensions/context_extension.dart';
-import 'package:tmdb_movie_app/common/theme/app_colors.dart';
-import 'package:tmdb_movie_app/common/widgets/buttons/primary_app_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../translation/trans_labels.dart';
-
 class AppHintDialog extends StatelessWidget {
-  const AppHintDialog({super.key, this.title, this.message, this.actionTitle, this.onTapAction});
+  const AppHintDialog(
+      {super.key,
+      this.title,
+      this.message,
+      this.actionTitle,
+      this.onTapAction});
 
   final String? title;
   final String? message;
@@ -28,17 +29,19 @@ class AppHintDialog extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           FixedSpacers.spacerH25,
-          AppPrimaryButton(
-            title: actionTitle ,
+          TextButton(
             onPressed: onTapAction ?? () => Get.back(),
+            child: Text(
+              title ?? '',
+              style: context.apptextTheme.titleSmall,
+            ),
           ),
         ],
       ),
       title: Text(
         title ?? 'Error',
         textAlign: TextAlign.center,
-        style:
-            context.apptextTheme.headlineLarge?.copyWith(color: AppColors.red),
+        style: context.apptextTheme.headlineLarge?.copyWith(color: Colors.red),
       ),
     );
   }

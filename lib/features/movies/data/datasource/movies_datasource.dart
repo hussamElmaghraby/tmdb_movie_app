@@ -27,5 +27,5 @@ abstract class MoviesDatasource {
   Future<MoviesResponseModel> searchMovie();
 
   @GET('${Apis.movieId}{movie_id}')
-  Future<MovieDetailsResponseModel> getMovie(@Path('movie_id') String movieId);
+  Future<MovieDetailsResponseModel> getMovie(@Path('movie_id') int? movieId);
 }
